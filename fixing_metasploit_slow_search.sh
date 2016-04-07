@@ -1,10 +1,11 @@
-# Enable PostgreSQL and Metasploit system services
-service postgresql start
-service metasploit start
+# Enable PostgreSQL 
+sudo service postgresql start
 
 # Enable them to boot at start up.
 update-rc.d postgresql enable
-update-rc.d metasploit enable
+
+# Initailize Metasploit PostgreSQL DB
+sudo msfdb init 
 
 # Rebuild Metasploits Cache
-db_rebuild_cache
+msfconsole -x "db_rebuild_cache"
